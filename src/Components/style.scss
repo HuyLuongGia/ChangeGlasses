@@ -1,0 +1,59 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#bgContainer {
+    position: relative;
+    isolation: isolate;
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background-image: url(../../public/glassesImage/background.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        opacity: 0.3;
+    }
+    h1 {
+        text-align: center;
+    }
+    .modelContainer {
+        display: flex;
+        justify-content: space-around;
+    }
+    .glassContainer {
+        width: 95%;
+        // height: 500px;
+        background: #fff;
+        margin-top: 50px;
+    }
+    .modelSet {
+        position: relative;
+        .glassSet {
+            position: absolute;
+            width: 35%;
+            top: 97px;
+            left: 90px;
+            opacity: 0.7;
+        }
+        .glassSetDes {
+            position: absolute;
+            bottom: 0;
+            left: 11px;
+            width: 71%;
+            isolation: isolate;
+            &::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: #fdbd8f;
+                opacity: 0.5;
+                z-index: -1;
+            }
+        }
+    }
+}
